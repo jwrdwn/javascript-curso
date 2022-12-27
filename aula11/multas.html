@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <h3>Digite a velocidade: </h3>
+
+    <input type="number" name="velocidade" id="velocidade">
+    <input type="button" value="Enviar" onclick="processar()">
+
+    <div id="status">Status</div>
+
+    <script>
+        function processar() {
+            var texto = document.getElementById('velocidade');
+            var status = document.getElementById('status');
+            var velocidade = Number(texto.value);
+
+            status.innerHTML = `<p>Sua velocidade foi de <strong>${velocidade} km/h</strong>.</p>`;
+            
+            if(velocidade > 70) {
+                status.innerHTML += '<p><strong>Você foi multado!</strong></p>';
+            }
+
+            status.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`;
+            
+        }
+    </script>
+</body>
+</html>
