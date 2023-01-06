@@ -15,7 +15,6 @@
         <div>
             <p>Ano de nascimento:
                 <input type="number" name="txtano" id="txtano" min="1903" max="2023" placeholder="2000" required>
-                <input type="button" value="Enviar">
             </p>
             <p>Sexo:
                 <input type="radio" name="sexo" id="mas" checked>
@@ -23,9 +22,12 @@
                 <input type="radio" name="sexo" id="fem">
                 <label for="fem">Feminino</label>
             </p>
+            <p>
+                <input type="button" value="Enviar" onclick="verificar()">
+            </p>
         </div>
         <div id="res">
-            testando...
+            Preencha o campo acima para ver o resultado!
         </div>
     </section>
     <footer>
